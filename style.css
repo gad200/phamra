@@ -1,0 +1,72 @@
+/* styles.css */
+
+/* Global Reset Styles */
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+/* Animated Background Styles */
+.background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #3498db;
+}
+
+/* Animated Links Styles */
+.links {
+    position: relative;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    list-style: none;
+    padding: 0;
+}
+
+.links li {
+    margin: 20px 0;
+    opacity: 0;
+    animation: animateLinks 2s ease-in-out forwards;
+}
+
+@keyframes animateLinks {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.links a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 24px;
+    transition: color 0.3s;
+}
+
+.links a:hover {
+    color: #ffa000;
+}
+
+/* Pharmacy Animated Background Styles */
+.container {
+    background: linear-gradient(90deg, #007bff, #00cc99, #007bff);
+    background-size: 20px 20px, 30px 30px, 40px 40px;
+    background-position: 0 0, 0 0, 0 0;
+    animation: animateBackground 10s linear infinite;
+}
+
+@keyframes animateBackground {
+    0% {
+        background-position: 0 0, 0 0, 0 0;
+    }
+    100% {
+        background-position: 500px 0, 300px 0, 400px 0;
+    }
+}
